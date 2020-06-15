@@ -1,0 +1,22 @@
+{
+  "name": "sedls-2020",
+  "private": true,
+  "description": "Website for the 2020 Southeast Data Librarian Symposium (SEDLS)",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.1",
+    "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "gridsome-plugin-tailwindcss": "^2.2.48",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "vue-svg-loader": "^0.16.0"
+  }
+}
