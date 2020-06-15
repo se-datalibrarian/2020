@@ -8,7 +8,7 @@
     <h1 class="ml-8 sm:mx-32 text-2xl">Southeast Data Librarian Symposium 2020</h1>
     <h2 class="ml-8 sm:mx-32 text-xl">Online, October 7-9</h2>
     <p class="mt-4">
-      The Southeast Data Librarian Symposium (SEDLS) is returing virtually in 2020! The program will consist of workshops, short presentations, and networking opportunities over three half-days, October 7-9.
+      The Southeast Data Librarian Symposium (SEDLS) is returning virtually in 2020! The program will consist of workshops, short presentations, and networking opportunities over three half-days, October 7-9.
     </p>
     <p class="mt-4">
       SEDLS is open to all who wish to attend, including students, data managers, and data scientists. The planning committee is accepting proposals through Friday, July 24. Based on community feedback, topics of particular interest this year include:
