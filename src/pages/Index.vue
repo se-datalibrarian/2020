@@ -21,7 +21,8 @@
     </ul>
     <div class="w-full flex justify-center my-6">
       <a href="https://forms.gle/g2B583ZS1F2cTXtk9" target="_blank" rel="noopener">
-        <button class="py-2 px-4 text-center border-gray-800 bg-gray-100 border-2 rounded-md text-gray-800 transition duration-200 ease-in-out hover:border-green-400 hover:text-green-400">Submit a proposal</button>
+      <Button />
+        <ButtonDefault>Submit a proposal</ButtonDefault>
       </a>
     </div>
     <p class="mt-4">
@@ -32,9 +33,11 @@
 
 <script>
   import Logo from '~/assets/logo-main.svg'
+  import ButtonDefault from '~/components/ButtonDefault.vue'
   export default {
     components: {
-      Logo
+      Logo,
+      ButtonDefault
     },
     metaInfo: {
       title: 'Home'
