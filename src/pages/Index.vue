@@ -1,6 +1,5 @@
 <template>
   <Layout>
-
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
     <Logo class="mx-8 sm:mx-32 mb-4"></Logo>
@@ -21,7 +20,6 @@
     </ul>
     <div class="w-full flex justify-center my-6">
       <a href="https://forms.gle/g2B583ZS1F2cTXtk9" target="_blank" rel="noopener">
-      <Button />
         <ButtonDefault>Submit a proposal</ButtonDefault>
       </a>
     </div>
@@ -32,17 +30,17 @@
 </template>
 
 <script>
-  import Logo from '~/assets/logo-main.svg'
-  import ButtonDefault from '~/components/ButtonDefault.vue'
-  export default {
-    components: {
-      Logo,
-      ButtonDefault
-    },
-    metaInfo: {
-      title: 'Home'
-    }
+import Logo from '~/assets/logo-main.svg'
+import ButtonDefault from '~/components/ButtonDefault.vue'
+export default {
+  components: {
+    Logo,
+    ButtonDefault,
+  },
+  metaInfo: {
+    title: 'Home'
   }
+}
 </script>
 
 <style>

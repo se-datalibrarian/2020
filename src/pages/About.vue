@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="text-2xl">About us</h1>
+    <h1 class="text-3xl">About us</h1>
     <p class="mt-4">
       The Southeast Data Librarian Symposium is intended to provide an opportunity for librarians and other research data specialists to explore developments in the field of data librarianship, including the management and sharing of research data.
     </p>
