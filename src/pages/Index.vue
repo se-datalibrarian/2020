@@ -32,10 +32,12 @@
 <script>
 import Logo from '~/assets/logo-main.svg'
 import ButtonDefault from '~/components/ButtonDefault.vue'
+import CardAnnouncement from '~/components/CardAnnouncement.vue'
 export default {
   components: {
     Logo,
     ButtonDefault,
+    CardAnnouncement
   },
   metaInfo: {
     title: 'Home'

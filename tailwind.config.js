@@ -17,7 +17,7 @@ module.exports = {
           color: '#667EEA',
           borderBottomWidth: '0',
           transitionProperty: 'border-bottom-width',
-          transitionDuration: '200ms',
+          transitionDuration: '150ms',
           transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
           '&:hover': {
             borderBottom: '#667EEA',
