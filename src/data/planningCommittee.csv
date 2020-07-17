@@ -1,8 +1,8 @@
-name,institution
-Erin Carrillo,Virginia Commonwealth University
-Melissa Chomintra,Tulane University
-Nina Exner,Virginia Commonwealth University
-Walt Gurley,North Carolina State University
-Jo Klein,University of North Carolina at Greensboro
-Megan Sheffield,Clemson University
-Mandy Swygart-Hobaugh,Georgia State University
+firstName,lastName,institution
+Erin,Carrillo,Virginia Commonwealth University
+Melissa,Chomintra,Tulane University
+Nina,Exner,Virginia Commonwealth University
+Walt,Gurley,North Carolina State University
+Jo,Klein,University of North Carolina at Greensboro
+Megan,Sheffield,Clemson University
+Mandy,Swygart-Hobaugh,Georgia State University

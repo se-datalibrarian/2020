@@ -8,21 +8,33 @@
       In addition to learning about new work in the field, attendees will have the opportunity to network and build partnerships with regional colleagues. It is open to all who wish to attend, including students, data managers, and data scientists.
     </p>
     <h2 class="text-2xl mt-4">Planning committee</h2>
-    <ul class="mt-4 ml-4 list-disc list-inside">
-      <li>Erin Carrillo, Virginia Commonwealth University</li>
-      <li>Melissa Chomintra, Tulane University</li>
-      <li>Nina Exner, Virginia Commonwealth University</li>
-      <li>Walt Gurley, North Carolina State University</li>
-      <li>Jo Klein, University of North Carolina at Greensboro</li>
-      <li>Megan Sheffield, Clemson University</li>
-      <li>Mandy Swygart-Hobaugh, Georgia State University</li>
-    </ul>
+    <div class="container sm:w-11/12 mx-auto flex flex-wrap justify-around">
+      <div class="mt-4 w-full sm:w-5/12" v-for="member of $static.allPlanningCommittee.edges" :key="member.node.id">
+        <h3>{{ member.node.firstName }} {{ member.node.lastName }}</h3>
+        <h4 class="text-sm text-gray-700">{{ member.node.institution }}</h4>
+      </div>
+      <div class="mt-4 hidden sm:inline-block sm:w-5/12"></div>
+    </div>
     <h2 class="text-2xl mt-4">Sponsors</h2>
     <div class="mt-4 flex flex-row justify-center">
-      <g-image src="~/assets/RDAP_Logo_Color.png" width="300px" alt="RDAP logo"/>
+      <g-image src="~/assets/RDAP_Logo_Color.png" width="250px" alt="RDAP logo"/>
     </div>
   </Layout>
 </template>
+
+<static-query>
+query {
+  allPlanningCommittee(sortBy:"lastName", order:ASC) {
+    edges {
+      node {
+        firstName
+        lastName
+        institution
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 export default {
