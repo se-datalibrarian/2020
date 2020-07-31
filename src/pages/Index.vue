@@ -10,7 +10,7 @@
       The Southeast Data Librarian Symposium (SEDLS) is returning virtually in 2020! The program will consist of workshops, short presentations, and networking opportunities over three half-days, October 7-9.
     </p>
     <p class="mt-4">
-      SEDLS is open to all who wish to attend, including students, data managers, and data scientists. The planning committee is accepting proposals through Friday, July 24. Based on community feedback, topics of particular interest this year include:
+      SEDLS is open to all who wish to attend, including students, data managers, and data scientists. The planning committee is accepting proposals through Monday, August 10. Based on community feedback, topics of particular interest this year include:
     </p>
     <ul class="mt-4 ml-4 list-disc list-inside">
       <li>Using available tools for research data management</li>
