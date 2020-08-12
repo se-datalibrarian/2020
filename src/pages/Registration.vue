@@ -12,6 +12,7 @@
     <p class="mt-4">
       SEDLS 2020 will be held online via Zoom and Discord. Zoom Pro for secure discussions is provided by the University of North Carolina at Greensboro University Libraries. Registration will be capped at 250 participants.
     </p>
+    <p class="mt-4">Registration management is provided by the Research Data Access &#38; Preservation Association.</p>
   </Layout>
 </template>
 
