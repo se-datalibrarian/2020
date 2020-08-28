@@ -6,21 +6,11 @@
 
     <h1 class="ml-8 sm:mx-32 text-2xl">Southeast Data Librarian Symposium 2020</h1>
     <h2 class="ml-8 sm:mx-32 text-xl">Online, October 7-9</h2>
-    <CardAnnouncement>
-      <p class="mt-2 text-lg">
-        Registration is now open for SEDLS 2020!
-      </p>
-      <div class="w-full flex justify-center my-6">
-        <a href="https://rdaapai18.wildapricot.org/event-3856493" target="_blank" rel="noopener">
-          <ButtonDefault>Register now</ButtonDefault>
-        </a>
-      </div>
-    </CardAnnouncement>
     <p class="mt-4">
       The Southeast Data Librarian Symposium (SEDLS) is returning virtually in 2020! The program will consist of workshops, short presentations, and networking opportunities over three half-days, October 7-9.
     </p>
     <p class="mt-4">
-      SEDLS is open to all who wish to attend, including students, data managers, and data scientists. Based on community feedback, topics of particular interest this year include:
+      SEDLS is open to all who wish to attend, including students, data managers, and data scientists. Topics covered may include:
     </p>
     <ul class="mt-4 ml-4 list-disc list-inside">
       <li>Using available tools for research data management</li>

@@ -2,11 +2,14 @@
   <Layout>
     <h1 class="text-3xl">Registration</h1>
     <p class="mt-4 text-lg">
-      Registration is now open for SEDLS 2020!
+      Registration is open for SEDLS 2020!
+    </p>
+    <p class="mt-4 italic">
+      Registration has reached capacity. You can join the waitlist to be included if a space becomes available.
     </p>
     <div class="w-full flex justify-center my-6">
       <a href="https://rdaapai18.wildapricot.org/event-3856493" target="_blank" rel="noopener">
-        <ButtonDefault>Register now</ButtonDefault>
+        <ButtonDefault>Join waitlist</ButtonDefault>
       </a>
     </div>
     <p class="mt-4">
