@@ -10,19 +10,34 @@ const parse = require('csv-parse/lib/sync');
 
 module.exports = function (api) {
   api.loadSource(async (actions) => {
-    const input = readFileSync('./src/data/planningCommittee.csv', 'utf8');
+    const planningCommitteeFile = readFileSync('./src/data/planningCommittee.csv', 'utf8');
 
-    const PlanningCommittee = parse(input, {
+    const programFile = readFileSync('./src/data/program.csv', 'utf8');
+
+    const PlanningCommittee = parse(planningCommitteeFile, {
       columns: true,
       skip_empty_lines: true,
     });
 
-    const collection = actions.addCollection({
+    const Program = parse(programFile, {
+      columns: true,
+      skip_empty_lines: true,
+    });
+
+    const planningCommitteeCollection = actions.addCollection({
       typeName: 'PlanningCommittee',
     });
 
+    const programCollection = actions.addCollection({
+      typeName: 'Program',
+    });
+
     for (const member of PlanningCommittee) {
-      collection.addNode(member);
+      planningCommitteeCollection.addNode(member);
+    }
+
+    for (const event of Program) {
+      programCollection.addNode(event);
     }
   })
 

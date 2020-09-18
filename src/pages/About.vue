@@ -16,8 +16,9 @@
       <div class="mt-4 hidden sm:inline-block sm:w-5/12"></div>
     </div>
     <h2 class="text-2xl mt-4">Sponsors</h2>
-    <div class="mt-4 flex flex-row justify-center">
-      <g-image src="~/assets/RDAP_Logo_Color.png" width="250px" alt="RDAP logo"/>
+    <div class="mt-4 flex flex-row flex-wrap justify-evenly">
+      <g-image class="m-4 object-contain" src="~/assets/RDAP_Logo_Color.png" width="250px" alt="RDAP logo"/>
+      <g-image class="m-4 object-contain" src="~/assets/uncgreensboro_LIB_v_3-color.png" width="250px" alt="UNCG Libraries logo"/>
     </div>
   </Layout>
 </template>

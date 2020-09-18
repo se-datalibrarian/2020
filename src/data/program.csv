@@ -1,0 +1,35 @@
+dayNumber,day,session,lengthMin,startTimeEST,endTimeEST,type,title,presenters
+1,"Wed, Oct 7",t1_wed,20,10:00 AM,10:20 AM,Short Talks,Welcome and symposium logistics,
+1,"Wed, Oct 7",t1_wed,20,10:20 AM,10:40 AM,Short Talks,There's Not a Magic Button For That: How to Integrate Data Visualization and Information Design Literacy Through Visualization Services at an Academic Library,Michael J. Stamper (Virginia Tech)
+1,"Wed, Oct 7",t1_wed,20,10:40 AM,11:00 AM,Short Talks,Becoming a DOI Issuer,Ali Krzton (Auburn University)
+1,"Wed, Oct 7",b1_wed,15,11:00 AM,11:15 AM,Break,,
+1,"Wed, Oct 7",t2_wed,20,11:15 AM,11:35 AM,Short Talks,Full STEAM Ahead: Piloting Graduate Student & Faculty RDM Workshops,"Corinne Bishop (University of Central Florida), Ven Basco (University of Central Florida), Lee Dotson (University of Central Florida)"
+1,"Wed, Oct 7",t2_wed,20,11:35 AM,11:55 AM,Short Talks,Strategizing Data Management and Services at the Congressional Research Service,Jacky Hart (Library of Congress / Congressional Research Service)
+1,"Wed, Oct 7",t2_wed,20,11:55 AM,12:15 PM,Short Talks,The DMPs / IRB Nexus and How Data Librarians Can Help,"Dessi Kirilova (Qualitative Data Repository), Sebastian Karcher (Qualitative Data Repository)"
+1,"Wed, Oct 7",b2_wed,45,12:15 PM,1:00 PM,Break,,
+1,"Wed, Oct 7",w3_wed,90,1:00 PM,2:30 PM,Workshops,Mapping in Tableau,Megan Slemons (Emory University)
+1,"Wed, Oct 7",w3_wed,90,1:00 PM,2:30 PM,Workshops,Practical Data Literacy Instruction: Fundamentals for Teaching Any Topic or Tool,"Nick Ruhs (Florida State University), Jesse Klein (Florida State University)"
+2,"Thurs, Oct 8",t1_thurs,20,10:00 AM,10:20 AM,Short Talks,Building together: community and collaboration as data literacy competencies,Isaac Williams (University of Texas at Arlington)
+2,"Thurs, Oct 8",t1_thurs,20,10:20 AM,10:40 AM,Short Talks,From Trepidation to Enthusiasm: Introductory Data Literacy Instruction,"Betty Garrison (Elon University), Jesse Akman (Elon University), Alison Van Norman (Elon University)"
+2,"Thurs, Oct 8",t1_thurs,20,10:40 AM,11:00 AM,Short Talks,Convening a Data Literacy Academic Learning Community,Jen Doty (Emory University)
+2,"Thurs, Oct 8",b1_thurs,15,11:00 AM,11:15 AM,Break,,
+2,"Thurs, Oct 8",t2_thurs,20,11:15 AM,11:35 AM,Short Talks,"Where Have We Been, and Where Should We Be Going? An Assessment of Graduate Students' Data Needs","Mandy Swygart-Hobaugh (Georgia State University), Joel Glogowski (Georgia State University), Kelsey Jordan (Georgia State University), Jeremy Walker (Georgia State University)"
+2,"Thurs, Oct 8",t2_thurs,20,11:35 AM,11:55 AM,Short Talks,Data Literacy Competencies for Undergraduates: Exploring Faculty Perspectives and Librarian Liaison Opportunities,"Theresa Burress (University of South Florida St. Petersburg campus), Emily Mann (University of South Florida), Rachel Walton (Rollins College), Susan Montgomery (Rollins College)"
+2,"Thurs, Oct 8",t2_thurs,20,11:55 AM,12:15 PM,Short Talks,Data literacy in 60 minutes: teaching data literacy without a data background,Nancy Lovas (UNC Chapel Hill)
+2,"Thurs, Oct 8",b2_thurs,45,12:15 PM,1:00 PM,Break,,
+2,"Thurs, Oct 8",p3_thurs,90,1:00 PM,2:30 PM,Poster Session,"Utilizing Google Suite Applications to Store, Query, and Deliver Custom Generated Database Discovery Tools","Jonathan Briganti (Virginia Tech), Anne M. Brown (Virginia Tech)"
+2,"Thurs, Oct 8",p3_thurs,90,1:00 PM,2:30 PM,Poster Session,"Data Use, Re-use, and Curation Among Early-Career Faculty",Heather Barnes (Wake Forest University)
+2,"Thurs, Oct 8",p3_thurs,90,1:00 PM,2:30 PM,Poster Session,Completing the Cycle: Creating a Data Management Services Program,"Scott Bacon (Coastal Carolina University), Eric Resnis (Coastal Carolina University), Ariana Baker (Coastal Carolina University)"
+2,"Thurs, Oct 8",p3_thurs,90,1:00 PM,2:30 PM,Poster Session,Research as Design-Design as Research: Developing a Researcher-Driven Collaborative Model for Data Services,"Cinthya Ippoliti (University of Colorado, Denver), Kay Bjornen (Oklahoma State University)"
+2,"Thurs, Oct 8",p3_thurs,90,1:00 PM,2:30 PM,Poster Session,Surveying faculty for the best practise of data services,Songyao Chen (East Carolina University)
+2,"Thurs, Oct 8",p3_thurs,90,1:00 PM,2:30 PM,Poster Session,OSF and Infrastructure Enabling Efficacy in Researcher Practices,Eric Olson (Center for Open Science)
+3,"Fri, Oct 9",t1_fri,20,10:00 AM,10:20 AM,Short Talks,A Framework for Data Visualization: Foundations and Threshold Concepts,"Dorothy Ogdon (University of Alabama at Birmingham), M. Delores Carlito (University of Alabama at Birmingham)"
+3,"Fri, Oct 9",t1_fri,20,10:20 AM,10:40 AM,Short Talks,Tips to Effective Data Visualization,Thilani Samarakoon (University of Miami)
+3,"Fri, Oct 9",t1_fri,20,10:40 AM,11:00 AM,Short Talks,Using the DIG Method for Data Literacy,Dana Thompson (Murray State University)
+3,"Fri, Oct 9",b1_fri,15,11:00 AM,11:15 AM,Break,,
+3,"Fri, Oct 9",t2_fri,20,11:15 AM,11:35 AM,Short Talks,Building Data Literacy Suite in the Humanities: A Hands-on Approach,"Jiebei Luo (Boston College), Allison Xu (Boston College), Bee Lehman (Boston College)"
+3,"Fri, Oct 9",t2_fri,20,11:35 AM,11:55 AM,Short Talks,Reaching the qualitative researcher: lessons from a collaborative workshop with five liberal arts colleges,"Celia Emmelhainz (University of California, Berkeley), Parvaneh Abbaspour (Lewis & Clark College)"
+3,"Fri, Oct 9",t2_fri,20,11:55 AM,12:15 PM,Short Talks,Closing remarks and discussion,
+3,"Fri, Oct 9",b2_fri,45,12:15 PM,1:00 PM,Break,,
+3,"Fri, Oct 9",w3_fri,90,1:00 PM,2:30 PM,Workshop,Exploratory Text Analysis with Python,Scott Bailey (NC State University)
+3,"Fri, Oct 9",w3_fri,90,1:00 PM,2:30 PM,Workshop,Using a Backward Design Approach to Integrate Data Literacy into Library Instruction,Donna Ziegenfuss (University of Utah)
