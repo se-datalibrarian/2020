@@ -2,36 +2,30 @@
   <Layout>
     <h1 class="text-3xl">Program</h1>
     <div class="mt-4 mb-8" v-for="day in program" :key="day.day">
-      <p class="mt-4">
-        All sessions will be held online via Zoom and Discord.
+      <p>
+        Sessions will be held online via Zoom and Discord. Information and instructions to join sessions will be sent to registered attendees via email in the week before the symposium, along with links to join workshops for workshop registrants.
       </p>
-      <h2 class="mt-4 border-b-2 border-solid border-gray-800 text-2xl text-green-500">{{ day.day }}</h2>
+      <h2 class="mt-4 pl-4 p-2 bg-gray-800 text-2xl text-green-400">{{ day.day }}</h2>
       <div 
-        class="mt-0 px-4 py-2 alternate-background"
+        class="mt-0 py-2 alternate-background border-b-2 border-solid border-gray-300 md:flex md:flex-row"
         v-for="session in day.sessions"
         :key="session.id"
       >
-        <h3 class="text-lg">
-          {{ session.sessionType }} 
-        </h3>
-        <h3 class="mb-1 text-sm font-hairline">
-          {{ session.sessionStartTime }} - {{ session.sessionEndTime}}
-        </h3>
-        <div 
-          v-for="presentation in session.presentations"
-          :key="presentation.id"
-        >
-          <h4 
-            v-if="presentation.type !== 'Break'"
-            class="text-sm mt-4 font-hairline"
-          >{{ presentation.startTime }}
-          </h4>
-          <h4 
-            v-if="presentation.type !== 'Break'"
-            class="text-md"
-          >{{ presentation.title }}
-          </h4>
-          <p class="text-sm text-gray-700">{{ presentation.presenters }}</p>
+        <div class="px-4 md:w-2/12">
+          <h3 class="text-lg text-pink-500">
+            {{ session.sessionType }}
+          </h3>
+          <h3 class="mb-1 text-sm font-hairline">
+            {{ session.sessionStartTime }} - {{ session.sessionEndTime}}
+          </h3>
+        </div>
+        <div class="md:-mt-3 px-4 w-10/12">
+          <PresentationInfoBlock 
+            v-for="presentation in session.presentations"
+            :key="presentation.id"
+            class="first:-mt-3"
+            v-bind:presentationInfo="presentation"
+          />
         </div>
       </div>
     </div>
@@ -42,7 +36,7 @@
 query {
   allProgram(
     # filter: {dayNumber: {eq: "1"}},
-    sortBy:"startTimeEST", order:ASC
+    sortBy:"startTimeEDT", order:ASC
   ) {
     edges {
       node {
@@ -50,11 +44,12 @@ query {
         day
         session
         lengthMin
-        startTimeEST
-        endTimeEST
+        startTimeEDT
+        endTimeEDT
         type
         title
         presenters
+        abstract
       }
     }
   }
@@ -66,13 +61,11 @@ query {
 import { groups } from 'd3-array'
 
 // Components
-import ButtonDefault from '~/components/ButtonDefault.vue'
-import CardAnnouncement from '~/components/CardAnnouncement.vue'
+import PresentationInfoBlock from '~/components/PresentationInfoBlock.vue'
 
 export default {
   components: {
-    ButtonDefault,
-    CardAnnouncement
+    PresentationInfoBlock
   },
 
   metaInfo: {
@@ -80,8 +73,19 @@ export default {
   },
 
   data: () => ({
-    program: {}
+    program: {},
+    showAbstract: true
   }),
+
+  computed: {
+    abstractToggleLanguage() {
+      if (this.showAbstract) {
+        return "Hide abstract"
+      } else {
+        return "Show abstract"
+      }
+    }
+  },
 
   methods: {
     formatProgramData: function() {
@@ -106,14 +110,15 @@ export default {
             return {
               id: i,
               sessionType: session[0],
-              sessionStartTime: session[1][0].startTimeEST,
-              sessionEndTime: session[1][session[1].length - 1].endTimeEST,
+              sessionStartTime: session[1][0].startTimeEDT,
+              sessionEndTime: session[1][session[1].length - 1].endTimeEDT,
               presentations: session[1].map(function(d, i) {
                 return {
                   id: i,
                   title: d.title,
                   presenters: d.presenters,
-                  startTime: d.startTimeEST,
+                  abstract: d.abstract,
+                  startTime: d.startTimeEDT,
                   presentationLength: +d.lengthMin,
                   type: d.type
                 }
@@ -122,8 +127,6 @@ export default {
           })
         }
       })
-
-      console.log(this.program)
     }
   },
 
