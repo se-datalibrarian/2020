@@ -3,23 +3,23 @@
     <h1 class="text-3xl">Program</h1>
     <div class="mt-4 mb-8" v-for="day in program" :key="day.day">
       <p>
-        Sessions will be held online via Zoom and Discord. Information and instructions to join sessions will be sent to registered attendees via email in the week before the symposium, along with links to join workshops for workshop registrants.
+        All sessions will be held online through Zoom and Discord. Information and instructions to join sessions will be sent to registered attendees via email in the week before the symposium, along with links to join workshops for workshop registrants.
       </p>
-      <h2 class="mt-4 pl-4 p-2 bg-gray-800 text-2xl text-green-400">{{ day.day }}</h2>
+      <h2 class="mt-4 pl-3 p-2 bg-gray-800 text-2xl text-green-400">{{ day.day }}</h2>
       <div 
         class="mt-0 py-2 alternate-background border-b-2 border-solid border-gray-300 md:flex md:flex-row"
         v-for="session in day.sessions"
         :key="session.id"
       >
-        <div class="px-4 md:w-2/12">
-          <h3 class="text-lg text-pink-500">
+        <div class="px-3 md:w-1/6">
+          <h3 class="text-xl text-pink-500">
             {{ session.sessionType }}
           </h3>
-          <h3 class="mb-1 text-sm font-hairline">
+          <h3 class="mb-1 text-md font-light text-gray-700">
             {{ session.sessionStartTime }} - {{ session.sessionEndTime}}
           </h3>
         </div>
-        <div class="md:-mt-3 px-4 w-10/12">
+        <div class="md:-mt-3 px-3 md:w-5/6">
           <PresentationInfoBlock 
             v-for="presentation in session.presentations"
             :key="presentation.id"

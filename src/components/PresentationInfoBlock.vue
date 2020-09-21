@@ -2,26 +2,24 @@
 <div>
   <h4 
     v-if="presentationInfo.type !== 'Break'"
-    class="text-sm mt-4 font-hairline"
+    class="text-md mt-4 font-light text-gray-700"
   >
     {{ presentationInfo.startTime }}
   </h4>
   <h4 
     v-if="presentationInfo.type !== 'Break'"
-    class="text-md"
+    class="text-lg mt-1"
   >
     {{ presentationInfo.title }}
   </h4>
-  <p class="text-sm font-hairline">{{ presentationInfo.presenters }}</p>
-  <div
+  <p class="text-md mt-1 font-light text-gray-700">{{ presentationInfo.presenters }}</p>
+  <button
     v-on:click="showAbstract = !showAbstract"
     v-if="presentationInfo.abstract"
-    class="abstract-toggle cursor-pointer flex flex-row align-middle"
+    class="abstract-toggle mt-2 flex flex-row"
     v-html="abstractToggleLanguage"
-  ></div>
-  <!-- <transition name="abstract-animation"> -->
-    <p v-show="presentationInfo.abstract && showAbstract" class="mt-4 text-sm whitespace-pre-wrap overflow-hidden relative">{{ presentationInfo.abstract }}</p>
-  <!-- </transition> -->
+  ></button>
+  <p v-show="presentationInfo.abstract && showAbstract" class="mt-1 text-md whitespace-pre-wrap overflow-hidden">{{ presentationInfo.abstract }}</p>
 </div>
 </template>
 
@@ -41,22 +39,16 @@ export default {
     abstractToggleLanguage() {
       if (this.showAbstract) {
         return `
-          <span class='dropdown-text text-indigo-600'>Hide abstract</span>
-            <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather stroke-current text-indigo-600'>
+          <span class='text-indigo-500'>Abstract </span>
+            <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 16' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather stroke-current text-indigo-500'>
             <polyline points='18 15 12 9 6 15'></polyline>
           </svg>`
       } else {
         return `
-          <span class='dropdown-text text-indigo-600'>Show abstract</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather stroke-current text-indigo-600"><polyline points="6 9 12 15 18 9"></polyline></svg>`
+          <span class='text-indigo-500'>Abstract</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather stroke-current text-indigo-500"><polyline points="6 9 12 15 18 9"></polyline></svg>`
       }
     }
   }
 }
 </script>
-
-<style>
-.dropdown-text {
-  width: 7rem;
-}
-</style>
