@@ -2,7 +2,7 @@
 <div>
   <h4 
     v-if="presentationInfo.type !== 'Break'"
-    class="text-md mt-4 font-light text-gray-700"
+    class="text-md mt-6 font-light text-gray-700"
   >
     {{ presentationInfo.startTime }}
   </h4>

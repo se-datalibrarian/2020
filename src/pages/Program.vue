@@ -1,29 +1,39 @@
 <template>
   <Layout>
     <h1 class="text-3xl">Program</h1>
+    <p class="mt-4">
+      Sessions will be held online through Zoom and Discord. Information and instructions to join sessions will be sent to registered attendees via email in the week before the symposium, along with links to join workshops for workshop registrants.
+    </p>
+    <p class='mt-4'>
+      Attendees are expected to follow the symposium <g-link class="link" to="/code-of-conduct" active-class="null">Code of Conduct</g-link> and to be aware of the planning committee's <g-link class="link" to="/accessibility" active-class="null">Commitment to Accessibility</g-link>.
+    </p>
+    <p class="mt-4 font-bold">All listed times are in Eastern Time (EDT).</p>
     <div class="mt-4 mb-8" v-for="day in program" :key="day.day">
-      <p>
-        All sessions will be held online through Zoom and Discord. Information and instructions to join sessions will be sent to registered attendees via email in the week before the symposium, along with links to join workshops for workshop registrants.
-      </p>
       <h2 class="mt-4 pl-3 p-2 bg-gray-800 text-2xl text-green-400">{{ day.day }}</h2>
       <div 
         class="mt-0 py-2 alternate-background border-b-2 border-solid border-gray-300 md:flex md:flex-row"
         v-for="session in day.sessions"
         :key="session.id"
       >
-        <div class="px-3 md:w-1/6">
+        <div 
+          class="px-3 md:w-1/6"
+          v-bind:class="{'md-border-r':(session.sessionType !== 'Break' )}"
+        >
           <h3 class="text-xl text-pink-500">
             {{ session.sessionType }}
           </h3>
-          <h3 class="mb-1 text-md font-light text-gray-700">
+          <h3 
+            class="mb-1 text-md font-light text-gray-700 md:border-transparent"
+            v-bind:class="{'sm-border-b':(session.sessionType !== 'Break' )}"
+          >
             {{ session.sessionStartTime }} - {{ session.sessionEndTime}}
           </h3>
         </div>
-        <div class="md:-mt-3 px-3 md:w-5/6">
+        <div class="md:-mt-5 px-3 md:w-5/6">
           <PresentationInfoBlock 
             v-for="presentation in session.presentations"
             :key="presentation.id"
-            class="first:-mt-3"
+            class=""
             v-bind:presentationInfo="presentation"
           />
         </div>
@@ -138,8 +148,28 @@ export default {
 
 <style lang="scss">
 .alternate-background{
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background-color: #EDF2F7;
+  }
+}
+
+.md-border-r {
+  border-right-width: 0;
+
+  @media (min-width: 768px) {
+    border-right-style: solid;
+    border-right-color: #F687B3;
+    border-right-width: 2px;
+  }
+}
+
+.sm-border-b {
+  border-bottom-style: solid;
+  border-bottom-color: #F687B3;
+  border-bottom-width: 2px;
+
+  @media (min-width: 768px) {
+    border-bottom-width: 0;
   }
 }
 </style>

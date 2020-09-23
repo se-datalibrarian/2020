@@ -11,7 +11,7 @@
     <div class="container sm:w-11/12 mx-auto flex flex-wrap justify-around">
       <div class="mt-4 w-full sm:w-5/12" v-for="member of $static.allPlanningCommittee.edges" :key="member.node.id">
         <h3>{{ member.node.firstName }} {{ member.node.lastName }}</h3>
-        <h4 class="text-sm font-hairline">{{ member.node.institution }}</h4>
+        <h4 class="text-md font-light">{{ member.node.institution }}</h4>
       </div>
       <div class="mt-4 hidden sm:inline-block sm:w-5/12"></div>
     </div>

@@ -1,7 +1,5 @@
 <template>
   <Layout>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
     <Logo class="mx-8 sm:mx-32 mb-4"></Logo>
 
     <h1 class="ml-8 sm:mx-32 text-2xl">Southeast Data Librarian Symposium 2020</h1>
@@ -10,12 +8,12 @@
       The Southeast Data Librarian Symposium (SEDLS) is returning virtually in 2020! The program will consist of workshops, short presentations, and networking opportunities over three half-days, October 7-9.
     </p>
     <p class="mt-4">
-      SEDLS is open to all who wish to attend, including students, data managers, and data scientists. Topics covered may include:
+      SEDLS is open to all who wish to attend, including students, data managers, and data scientists. General themes for SEDLS 2020 include:
     </p>
     <ul class="mt-4 ml-4 list-disc list-inside">
-      <li>Using available tools for research data management</li>
-      <li>Using data analysis and data visualization tools</li>
-      <li>Data support for undergraduate research</li>
+      <li>Research data management tools and methods</li>
+      <li>Data analysis and data visualization tools and methods</li>
+      <li>Data support for student research</li>
       <li>Addressing data literacy in the curriculum</li>
     </ul>
     <p class="mt-4">
@@ -26,14 +24,12 @@
 
 <script>
 import Logo from '~/assets/logo-main.svg'
-import ButtonDefault from '~/components/ButtonDefault.vue'
-import CardAnnouncement from '~/components/CardAnnouncement.vue'
+
 export default {
   components: {
-    Logo,
-    ButtonDefault,
-    CardAnnouncement
+    Logo
   },
+
   metaInfo: {
     title: 'Home'
   }
