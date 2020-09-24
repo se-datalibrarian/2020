@@ -20,7 +20,7 @@
       If any of the symposium organizers receive reports of any violations to the above listings you will be removed from the meeting for the duration of the symposium. You will be blocked from returning to any of the sessions that happen throughout the symposium and will be removed from the Discord server.
     </p>
     <p class="mt-4">
-      Code of conduct violations can be reported through the <a class="link" href="https://forms.gle/vU65Dkvi5kHyfdYe7">Reporting Code of Conduct Violation Google Form</a>. Reports will be kept confidential to as small a group as reasonably possible.
+      Code of conduct violations can be reported through the <a class="link" href="https://forms.gle/vU65Dkvi5kHyfdYe7">Report Code of Conduct Violation Google Form</a>. Reports will be kept confidential to as small a group as reasonably possible.
     </p>
     <p class="mt-4">
       Symposium organizers will react to the incident as soon as possible and make a decision. Once a decision is made we will communicate to the alleged harasser about the complaint and the actions that will happen. We will then follow up with the accuser about what actions were taken and check in with them to see how they are and what additional support they need.
