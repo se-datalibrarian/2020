@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed z-0 top-0 w-screen h-16 flex flex-wrap items-center justify-between lg:justify-center pl-2 pr-6 mb-8 header bg-gray-800">
+  <header class="fixed top-0 w-screen h-16 flex flex-wrap items-center justify-between lg:justify-center pl-2 pr-6 mb-8 header bg-gray-800">
     <g-link class="flex items-center lg:mr-16" to="/" active-class="null">
       <LogoSymbol class="fill-current text-green-400 hidden md:inline-block h-4 mr-2 ml-4" aria-label="Home" />
       <LogoTriangle class="fill-current text-green-400 inline-block md:hidden h-12" aria-label="Home" />
@@ -9,11 +9,11 @@
     </g-link>
     <nav class="hidden sm:inline">
       <g-link
-        v-for="page in $static.allPage" :key="page.path"
+        v-for="page in sortedPageLinks" :key="page.path"
         class="text-gray-100 sm:ml-4 transition duration-200 ease-in-out hover:text-green-400"
         :to="page.path"
       >
-        {{ page.pageLinkText }}
+        {{ formatPageLinks(page.path) }}
       </g-link>
     </nav>
     <button v-on:click="show = !show" class="relative inline sm:hidden w-12 h-12" aria-label="Toggle Menu">
@@ -29,8 +29,19 @@
       </transition>
     </button>
     <transition name="slide-down">
-      <nav v-if="show" class="mobile-nav absolute sm:hidden flex flex-col bg-gray-800 p-4 rounded-b-lg">
-        <g-link v-for="page in $static.allPage" :key="page.path" v-on:click="show = false" class="text-xl text-gray-100 transition duration-200 ease-in-out hover:text-green-400" :to="page.path">{{ page.pageLinkText }}</g-link>
+      <nav
+        v-if="show"
+        v-on-clickaway="away"
+        class="mobile-nav absolute sm:hidden flex flex-col bg-gray-800 p-4 rounded-b-lg"
+      >
+        <g-link
+          v-for="page in sortedPageLinks" :key="page.path"
+          v-on:click="show = false"
+          class="my-2 text-lg text-gray-100 transition duration-200 ease-in-out hover:text-green-400"
+          :to="page.path"
+        >
+          {{ formatPageLinks(page.path) }}
+        </g-link>
       </nav>
     </transition>
   </header>
@@ -50,6 +61,7 @@ query {
 <script>
 import LogoSymbol from '~/assets/logo-wide.svg'
 import LogoTriangle from '~/assets/logo-triangle.svg'
+import { mixin as clickaway } from 'vue-clickaway'
 
 export default {
   components: {
@@ -57,35 +69,45 @@ export default {
     LogoTriangle
   },
 
+  mixins: [ clickaway ],
+
   data: function() {
     return {
       show: false
     }
   },
 
-  methods: {
-    sortPages: function() {
-        const conductPage = this.$static.allPage.splice(1, 1)
-        this.$static.allPage.splice(3, 0, conductPage[0])
-        this.$static.allPage.forEach(d => d.pageLinkText = formatPageLinks(d.path))
-
-        function formatPageLinks(page) {
-          const lowerCasePage = page.split('/')[1]
-          const capitalCasePage = lowerCasePage.charAt(0).toUpperCase() +
-            lowerCasePage.slice(1)
-          let stripDash = capitalCasePage.split('-')
-          if (stripDash[2] === "conduct") {
-            stripDash[2] = stripDash[2].charAt(0).toUpperCase() +
-              stripDash[2].slice(1)
-          }
-          return stripDash.join(" ")
-        }
-    },
+  computed: {
+    sortedPageLinks() {
+      const sortOrder = [
+        'About', 'Code of Conduct', 'Program', 'Accessibility', 'Registration'
+      ]
+      const unsortedPageLinks = this.$static.allPage
+      return this.$static.allPage.map(function(page) {
+        const sortIndex = sortOrder.findIndex(sortPage =>
+          sortPage.toLowerCase() ===
+          page.path
+            .split('/')[1]
+            .split('-')
+            .join(' ')
+        )
+        return unsortedPageLinks[sortIndex]
+      })
+    }
   },
 
-  mounted() {
-    if (this.$static.allPage[1].path === '/code-of-conduct/') {
-      this.sortPages()
+  methods: {
+    away: function() {
+      this.show = false
+    },
+
+    formatPageLinks: function(page) {
+      const lowerCasePage = page.split('/')[1].split('-')
+      const upperCasePage = lowerCasePage.map(d =>
+        !['of', 'to'].includes(d) ?
+          d.charAt(0).toUpperCase() + d.slice(1) : d
+      )
+      return upperCasePage.join(" ")
     }
   }
 }

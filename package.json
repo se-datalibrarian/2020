@@ -16,7 +16,8 @@
     "csv-parse": "^4.12.0",
     "d3-array": "^2.7.1",
     "gh-pages": "^3.1.0",
-    "gridsome": "^0.7.21"
+    "gridsome": "^0.7.21",
+    "vue-clickaway": "^2.2.2"
   },
   "devDependencies": {
     "gridsome-plugin-tailwindcss": "^2.2.48",

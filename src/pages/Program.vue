@@ -87,16 +87,6 @@ export default {
     showAbstract: true
   }),
 
-  computed: {
-    abstractToggleLanguage() {
-      if (this.showAbstract) {
-        return "Hide abstract"
-      } else {
-        return "Show abstract"
-      }
-    }
-  },
-
   methods: {
     formatProgramData: function() {
       function groupBy(objectArray, prop) {

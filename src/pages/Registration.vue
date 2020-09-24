@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <h1 class="text-3xl">Registration</h1>
-    <p class="mt-4 text-lg">
-      Registration for the 2020 Southeast Data Librarian Symposium had closed.
+    <p class="mt-4 italic">
+      Registration for the 2020 Southeast Data Librarian Symposium has closed.
     </p>
     <p class="mt-4">
       Registered attendees will receive updates through email regarding access to sessions via Zoom and Discord and workshop registration.

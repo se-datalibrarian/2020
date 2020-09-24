@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <HeaderLayout />
-    <div class="container mx-auto max-w-screen-md mt-24 px-2 sm:px-4 text-gray-800">
+    <div class="container mx-auto max-w-screen-md mt-24 px-3 sm:px-4 text-gray-800">
       <transition name="fade" appear>
         <main>
           <slot />
