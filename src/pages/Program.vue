@@ -4,10 +4,30 @@
     <p class="mt-4">
       Sessions will be held online through Zoom and Discord. Information and instructions to join sessions will be sent to registered attendees via email in the week before the symposium, along with links to join workshops for workshop registrants.
     </p>
-    <p class='mt-4'>
+    <p class="mt-4">
       Attendees are expected to follow the symposium <g-link class="link" to="/code-of-conduct" active-class="null">Code of Conduct</g-link> and to be aware of the planning committee's <g-link class="link" to="/accessibility" active-class="null">Commitment to Accessibility</g-link>.
     </p>
+    <p class="mt-4">
+      All short talks, excepting those where presenters were unable to give permission to do so, will be recorded, captioned/transcribed, and shared after the symposium. Workshops and the live poster sessions will not be recorded.
+    </p>
     <p class="mt-4 font-bold">All listed times are in Eastern Time (EDT).</p>
+    <!-- <div class="mt-4 mb-8">
+      <h2 class="mt-4 pl-3 p-2 bg-gray-800 text-2xl text-green-400">Tues, Oct 6</h2>
+      <div 
+        class="mt-0 py-2 bg-gray-200 border-b-2 border-solid border-gray-300 md:flex md:flex-row">
+        <div class="px-3 md:w-1/6 md-border-r">
+          <h3 class="text-xl text-pink-500">Social</h3>
+          <h3 class="mb-1 text-md font-light text-gray-700 md:border-transparent sm-border-b">5:00 PM - 6:30 PM</h3>
+        </div>
+        <div class="md:-mt-5 px-3 md:w-5/6">
+          <h4 class="text-md mt-6 font-light text-gray-700">5:00 PM</h4>
+          <h4 class="text-lg mt-1">Pre-Symposium Social</h4>
+          <p class="mt-1 text-md">
+            An opportunity to virtually meet with other SEDLS 2020 attendees with open discussion and games in Zoom. 
+          </p>
+        </div>
+      </div>
+    </div> -->
     <div class="mt-4 mb-8" v-for="day in program" :key="day.day">
       <h2 class="mt-4 pl-3 p-2 bg-gray-800 text-2xl text-green-400">{{ day.day }}</h2>
       <div 
