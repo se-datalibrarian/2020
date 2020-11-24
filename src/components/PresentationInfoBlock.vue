@@ -30,7 +30,7 @@
       class="link mt-2"
       v-bind:class="{'ml-4':(presentationInfo.presenters !== '' )}"
       v-bind:href="'https://www.youtube.com/'"
-    >View recording on Youtube</a>
+    >View recording on YouTube</a>
   </div>
   <p v-show="presentationInfo.abstract && showAbstract" class="mt-1 text-md whitespace-pre-wrap overflow-hidden">{{ presentationInfo.abstract }}</p>
 </div>
