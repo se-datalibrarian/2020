@@ -8,7 +8,7 @@
       Attendees are expected to follow the symposium <g-link class="link" to="/code-of-conduct" active-class="null">Code of Conduct</g-link> and to be aware of the planning committee's <g-link class="link" to="/accessibility" active-class="null">Commitment to Accessibility</g-link>.
     </p>
     <p class="mt-4">
-      All short talks, excepting those where presenters were unable to give permission to do so, will be recorded, captioned/transcribed, and shared after the symposium. Workshops and the live poster sessions will not be recorded.
+      All short talks, excepting those where presenters were unable to give permission to do so, have been recorded and captioned and are available in <a class="link" href="https://www.youtube.com/playlist?list=PLTC6jPg1N9B4a0EM4tOK06vJKlN530PT2">the Southeast Data Librarian Symposium 2020 playlist</a> on the SEDLS YouTube Channel. Links to individual short talk recordings and presentation materials can be found in the program listing below.
     </p>
     <p class="mt-4 font-bold">All listed times are in Eastern Time (EDT).</p>
     <div class="mt-4 mb-8">
@@ -80,6 +80,8 @@ query {
         title
         presenters
         abstract
+        YouTubeLink
+        materialsLink
       }
     }
   }
@@ -140,7 +142,9 @@ export default {
                   abstract: d.abstract,
                   startTime: d.startTimeEDT,
                   presentationLength: +d.lengthMin,
-                  type: d.type
+                  type: d.type,
+                  YouTubeLink: d.YouTubeLink,
+                  materialsLink: d.materialsLink
                 }
               })
             }

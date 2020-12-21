@@ -18,20 +18,22 @@
   >
     {{ presentationInfo.presenters }}
   </p>
-  <div class="flex flex-row">
-    <button
-      v-on:click="showAbstract = !showAbstract"
-      v-if="presentationInfo.abstract"
-      class="abstract-toggle mt-2 flex flex-row"
-      v-html="abstractToggleLanguage"
-    ></button>
-    <a 
-      v-if="!['Break', 'Workshops', 'Posters'].includes(presentationInfo.type)"
-      class="link mt-2"
-      v-bind:class="{'ml-4':(presentationInfo.presenters !== '' )}"
-      v-bind:href="'https://www.youtube.com/'"
-    >View recording on YouTube</a>
-  </div>
+  <a
+    v-if="presentationInfo.YouTubeLink !== ''"
+    class="link mt-2 block"
+    v-bind:href="presentationInfo.YouTubeLink"
+  >View recording on YouTube</a>
+  <a
+    v-if="!['Break'].includes(presentationInfo.type) && presentationInfo.materialsLink !== ''"
+    class="link mt-2 block"
+    v-bind:href="presentationInfo.materialsLink"
+  >View presentation materials</a>
+  <button
+    v-on:click="showAbstract = !showAbstract"
+    v-if="presentationInfo.abstract"
+    class="abstract-toggle mt-2 flex flex-row"
+    v-html="abstractToggleLanguage"
+  ></button>
   <p v-show="presentationInfo.abstract && showAbstract" class="mt-1 text-md whitespace-pre-wrap overflow-hidden">{{ presentationInfo.abstract }}</p>
 </div>
 </template>
