@@ -18,6 +18,18 @@
   >
     {{ presentationInfo.presenters }}
   </p>
+  <p
+    v-if="this.noShare.includes(presentationInfo.presenters)"
+    class="text-md mt-1 font-light italic text-gray-700"
+  >
+    Presenter was unable to allow recording or sharing of presentation materials
+  </p>
+  <p
+    v-if="['Posters', 'Workshops'].includes(presentationInfo.type)"
+    class="text-md mt-1 font-light italic text-gray-700"
+  >
+    This presentation was not recorded
+  </p>
   <a
     v-if="presentationInfo.YouTubeLink !== ''"
     class="link mt-2 block"
@@ -48,6 +60,9 @@ export default {
 
   data: () => ({
     showAbstract: false,
+    noShare: [
+      'Jacky Hart (Library of Congress / Congressional Research Service)'
+    ]
   }),
 
   computed: {
