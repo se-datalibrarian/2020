@@ -7,6 +7,13 @@
     <p class="mt-4">
       In addition to learning about new work in the field, attendees will have the opportunity to network and build partnerships with regional colleagues. It is open to all who wish to attend, including students, data managers, and data scientists.
     </p>
+    <h2 class="text-2xl mt-4">Program Planning</h2>
+    <p class="mt-4">
+      The symposium is organized by a volunteer committee of librarians working in the field of data librarianship. Symposium themes are based on responses from an interest survey provided to previous SEDLS attendees and relevant data librarianship topics identified by the planning committee.
+    </p>
+    <p class="mt-4">
+      The program is developed based on selected proposals submitted by the community. All proposal abstracts are peer reviewed by the planning committee under a single-blind review protocol blind to author and institution.
+    </p>
     <h2 class="text-2xl mt-4">Planning committee</h2>
     <div class="container sm:w-11/12 mx-auto flex flex-wrap justify-around">
       <div class="mt-4 w-full sm:w-5/12" v-for="member of $static.allPlanningCommittee.edges" :key="member.node.id">
